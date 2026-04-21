@@ -44,7 +44,7 @@ log = logging.getLogger(__name__)
 
 try:
     # ── Connect to Atlas ───────────────────────────────────────
-    uri = "mongodb+srv://alkalink1:DS4320@cluster0.mqg4u.mongodb.net/?retryWrites=true&w=majority"
+    uri = "mongodb+srv://alkalink1:######@cluster0.mqg4u.mongodb.net/?retryWrites=true&w=majority"
     client = MongoClient(uri)
     db = client['movielens']
     log.info("Connected to Atlas")
