@@ -45,7 +45,7 @@ based on their rating history, even though it is not globally beloved. This
 is the difference between personalized recommendation and simple popularity
 ranking.
 
-![Top 10 Recommendations for User 1](./recommendations.png)
+![Top 10 Recommendations for User 1](../figures/recommendations.png)
 
 The rating distribution below shows that most users rate movies between 3.0
 and 4.0 stars, with 4.0 being the single most common rating. This positive
@@ -53,4 +53,4 @@ skew confirms that users tend to rate movies they chose to watch favorably,
 which is an important characteristic of the dataset the model accounts for
 by mean-centering ratings before applying SVD.
 
-![Rating Distribution and Most-Rated Movies](./rating_distribution.png)
+![Rating Distribution and Most-Rated Movies](../figures/rating_distribution.png)
