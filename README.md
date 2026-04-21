@@ -17,7 +17,7 @@ a press release, and full metadata documentation.
 |-------|
 | [![DOI](https://zenodo.org/badge/1217142206.svg)](https://doi.org/10.5281/zenodo.19684378) |
 | [Press Release](https://github.com/alkalink1/ds4320-project2-movielens/blob/main/press%20release/press-release.md) |
-| [Data]() |
+| [Movie Lens Dataset](https://github.com/alkalink1/ds4320-project2-movielens/tree/main/data) |
 | [Pipeline](https://github.com/alkalink1/ds4320-project2-movielens/blob/main/pipeline/pipeline.ipynb) |
 | [MIT License](https://github.com/alkalink1/ds4320-project2-movielens/blob/main/LICENSE) |
 
@@ -93,11 +93,11 @@ more likely to enjoy, improving satisfaction and engagement.
 
 | Title | Brief Description | Link |
 |------|------------|------|
-| The MovieLens Datasets: History and Context | Official paper describing the MovieLens dataset and its structure. | [movie_lens.pdf](https://myuva-my.sharepoint.com/:b:/r/personal/eju2pk_virginia_edu/Documents/ds4320hw9/movie_lens.pdf?csf=1&web=1&e=kUp7CD) |
-| Introduction to Recommender Systems | Foundational overview of recommendation algorithms and personalization. | [intro_recommenders.pdf](https://myuva-my.sharepoint.com/:b:/r/personal/eju2pk_virginia_edu/Documents/ds4320hw9/intro_recommenders.pdf?csf=1&web=1&e=Ht6XHf) |
-| Item-Based Collaborative Filtering Recommendation Algorithms | Classic paper explaining collaborative filtering methods. | [collaborative_filtering.pdf](https://myuva-my.sharepoint.com/:b:/r/personal/eju2pk_virginia_edu/Documents/ds4320hw9/collective_filtering.pdf?csf=1&web=1&e=u6hruh) |
-| A Survey on Bias and Fairness in Recommender Systems | Discusses fairness, bias, and ethical concerns in recommendation systems. | [fairness_recommenders.pdf](https://myuva-my.sharepoint.com/:b:/r/personal/eju2pk_virginia_edu/Documents/ds4320hw9/fairness_recommenders.pdf?csf=1&web=1&e=vijoDF) |
-| Netflix Recommendations: Beyond the 5 Stars | Industry example of recommendation systems in practice. | [netflix_recommendations.pdf](https://myuva-my.sharepoint.com/:b:/r/personal/eju2pk_virginia_edu/Documents/ds4320hw9/netflix_recommendations.pdf?csf=1&web=1&e=x676za) |
+| The MovieLens Datasets: History and Context | Official paper describing the MovieLens dataset and its structure. | [movie_lens.pdf](https://myuva-my.sharepoint.com/:b:/g/personal/eju2pk_virginia_edu/IQCGsCh-rrXKRbCQj6JMeynQAZXeEH2nDvdDi_Ko7C0OHn8?e=BfEUyG) |
+| Introduction to Recommender Systems | Foundational overview of recommendation algorithms and personalization. | [intro_recommenders.pdf](https://myuva-my.sharepoint.com/:b:/g/personal/eju2pk_virginia_edu/IQBy7_SdOSzLSIVGtNZ6o66LAe3i3Hnt1mXrqUs8Fq0ufC8?e=lYpgBg) |
+| Item-Based Collaborative Filtering Recommendation Algorithms | Classic paper explaining collaborative filtering methods. | [collaborative_filtering.pdf](https://myuva-my.sharepoint.com/:b:/g/personal/eju2pk_virginia_edu/IQBlYip4QgmYRrjRezgjFUTkAZDS4fqPMO3V2b1YdeTv8c0?e=vQGmCN) |
+| A Survey on Bias and Fairness in Recommender Systems | Discusses fairness, bias, and ethical concerns in recommendation systems. | [fairness_recommenders.pdf](https://myuva-my.sharepoint.com/:b:/g/personal/eju2pk_virginia_edu/IQB4HE-W7dU5SIKrySaPCGOHAc2UGtolo58AE5j-ZGWvfLo?e=5m7K1E) |
+| Netflix Recommendations: Beyond the 5 Stars | Industry example of recommendation systems in practice. | [netflix_recommendations.pdf](https://myuva-my.sharepoint.com/:b:/g/personal/eju2pk_virginia_edu/IQDs3ISMOX3JQIIGEpwbOqo6AXfio190ty-OnZ1ZH3YRLPo?e=Ue5gQn) |
 
 ## Data Creation
 
@@ -117,8 +117,8 @@ README describing every file and field.
 
 | File | Description | Link |
 |------|-------------|------|
-| load_movielens.ipynb | Reads ratings.csv and movies.csv, converts genres to arrays, and inserts all documents into MongoDB Atlas | [link](./load_movielens.ipynb) |
-| pipeline.ipynb | Queries MongoDB to build a dataframe, filters by minimum rating count, runs collaborative filtering, and produces final visualization | [link](./pipeline.ipynb) |
+| load_movielens.ipynb | Reads ratings.csv and movies.csv, converts genres to arrays, and inserts all documents into MongoDB Atlas | [load_movielens.ipynb](./pipeline/load_movielens.ipynb) |
+| pipeline.ipynb | Queries MongoDB to build a dataframe, filters by minimum rating count, runs collaborative filtering, and produces final visualization | [pipeline.ipynb](./pipeline/pipeline.ipynb) |
 
 ### Rationale for Critical Decisions
 
@@ -181,15 +181,16 @@ guidelines define the expected document structure for each collection.
 
 ### Data Summary
 
-| ratings.csv | 100,836 user-movie ratings | [link](./data/ratings.csv) |
-| movies.csv | 9,742 movies with titles and genres | [link](./data/movies.csv) |
-| tags.csv | 3,683 user-applied text tags | [link](./data/tags.csv) |
-| links.csv | Maps movieId to IMDb and TMDb IDs | [link](./data/links.csv) |
-
 | Collection | Documents | Description |
 |------------|-----------|-------------|
 | ratings | 100,836 | One document per user-movie rating containing userId, movieId, rating, and timestamp |
 | movies | 9,742 | One document per movie containing movieId, title, and genres as an array |
+
+The relationship between the ratings and movies collections is established
+through the shared movieId field. Ratings documents reference movies by
+movieId, which corresponds directly to the movieId field in the movies
+collection. This link is implicit, MongoDB does not enforce it, but all
+pipeline code relies on it to join the two collections in pandas
 
 ### Data Dictionary
 
