@@ -58,7 +58,7 @@ use of collaborative filtering techniques to generate recommendations.
 ### Press Release Headline
 
 **Highly Rated Movies Are Not Just Popular — They Are Consistently Loved**
-[Jump to Press Release](./press-release.md)
+[Jump to Press Release](https://github.com/alkalink1/ds4320-project2-movielens/blob/main/press%20release/press-release.md)
 
 ---
 
@@ -179,9 +179,6 @@ guidelines define the expected document structure for each collection.
 }
 ```
 
-All documents in each collection must follow this structure. The genres field
-must always be stored as an array, not a pipe-separated string.
-
 ### Data Summary
 
 | Collection | Documents | Description |
@@ -200,7 +197,7 @@ must always be stored as an array, not a pipe-separated string.
 | title | string | Movie title with release year in parentheses | Shawshank Redemption, The (1994) |
 | genres | array | List of genre strings from a fixed set of 19 categories | ["Drama", "Crime"] |
 
-### Data Dictionary — Quantification of Uncertainty
+### Data Dictionary: Quantification of Uncertainty
 
 | Feature | Min | Max | Mean | Std Dev | Notes |
 |---------|-----|-----|------|---------|-------|
