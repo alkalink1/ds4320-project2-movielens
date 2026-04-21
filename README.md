@@ -18,7 +18,7 @@ a press release, and full metadata documentation.
 | [![DOI](https://zenodo.org/badge/1217142206.svg)](https://doi.org/10.5281/zenodo.19684378) |
 | [Press Release](https://github.com/alkalink1/ds4320-project2-movielens/blob/main/press%20release/press-release.md) |
 | [Data]() |
-| [Pipeline]() |
+| [Pipeline](https://github.com/alkalink1/ds4320-project2-movielens/blob/main/pipeline/pipeline.ipynb) |
 | [MIT License](https://github.com/alkalink1/ds4320-project2-movielens/blob/main/LICENSE) |
 
 ---
@@ -180,6 +180,11 @@ guidelines define the expected document structure for each collection.
 ```
 
 ### Data Summary
+
+| ratings.csv | 100,836 user-movie ratings | [link](./data/ratings.csv) |
+| movies.csv | 9,742 movies with titles and genres | [link](./data/movies.csv) |
+| tags.csv | 3,683 user-applied text tags | [link](./data/tags.csv) |
+| links.csv | Maps movieId to IMDb and TMDb IDs | [link](./data/links.csv) |
 
 | Collection | Documents | Description |
 |------------|-----------|-------------|
