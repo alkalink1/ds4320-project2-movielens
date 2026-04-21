@@ -426,7 +426,7 @@ log.info("Recommendation chart saved")
 
 
     
-![png](pipeline_files/pipeline_13_0.png)
+![png](../figures/recommendations.png)
     
 
 
@@ -477,7 +477,7 @@ log.info("Rating distribution chart saved")
 
 
     
-![png](pipeline_files/pipeline_15_0.png)
+![png](../figures/rating_distribution.png)
     
 
 
