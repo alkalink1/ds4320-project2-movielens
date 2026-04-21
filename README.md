@@ -15,11 +15,11 @@ a press release, and full metadata documentation.
 
 | Links |
 |-------|
-| [![DOI]() |
-| [Press Release]() |
+| [![DOI](https://zenodo.org/badge/1217142206.svg)](https://doi.org/10.5281/zenodo.19684378) |
+| [Press Release](https://github.com/alkalink1/ds4320-project2-movielens/blob/main/press%20release/press-release.md) |
 | [Data]() |
 | [Pipeline]() |
-| [MIT License]() |
+| [MIT License](https://github.com/alkalink1/ds4320-project2-movielens/blob/main/LICENSE) |
 
 ---
 
@@ -88,28 +88,6 @@ and predict future behavior. In this case, the dataset consists of user
 ratings for movies, allowing preferences to be modeled quantitatively.
 Recommendation systems use these patterns to suggest content that users are
 more likely to enjoy, improving satisfaction and engagement.
-
-### Background Readings
-
-
-## Domain Exposition
-
-### Terminology
-| Term | Definition |
-|------|----------|
-| Recommendation System | Algorithm that suggests content to users |
-| Collaborative Filtering | Method that recommends items based on similar users |
-| User-Item Matrix | Table of users and their ratings of movies |
-| Rating | Numerical score (0.5–5.0) given by a user to a movie |
-| Similarity | Measure of how alike two users are |
-| Prediction | Estimated rating a user would give to a movie |
-| Personalization | Tailoring recommendations to individual users |
-| Genre | Category of a movie |
-| Tag | User-generated label describing a movie |
-
-
-### Domain
-This project operates in the domain of recommendation systems, which are widely used to personalize content on digital platforms. These systems rely on user interaction data, such as ratings, to identify patterns in preferences and predict future behavior. In this case, the dataset consists of user ratings for movies, allowing preferences to be modeled quantitatively. Recommendation systems use these patterns to suggest content that users are more likely to enjoy.
 
 ### Background Readings
 
