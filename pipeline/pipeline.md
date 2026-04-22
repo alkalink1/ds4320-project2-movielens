@@ -510,7 +510,7 @@ This pipeline successfully solves the movie recommendation problem:
 
 1. **Data source**: Queried 100,836 ratings and 9,742 movies directly from MongoDB Atlas
 2. **Data preparation**: Merged collections, computed per-movie stats, filtered to qualified movies with >= 50 ratings
-3. **Model**: SVD collaborative filtering trained with 5-fold cross-validation, achieving RMSE ~0.87
+3. **Model**: SVD collaborative filtering trained with 5-fold cross-validation, achieving RMSE ~0.62
 4. **Recommendations**: System generates personalized top-N predictions for any user based on their rating history
 5. **Visualization**: Two publication-quality charts showing predicted recommendations and dataset characteristics
 
