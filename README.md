@@ -41,8 +41,8 @@ With the rapid growth of digital content, users are often overwhelmed by
 the number of available choices on platforms like Netflix and YouTube.
 Recommendation systems are essential for helping users discover relevant
 content efficiently and improving user engagement. This project is motivated
-by the need to understand how user behavior data — specifically movie ratings
-— can be used to generate personalized recommendations that reflect individual
+by the need to understand how user behavior data, and specifically how movie ratings
+can be used to generate personalized recommendations that reflect individual
 preferences.
 
 ### Rationale for Refinement
@@ -190,7 +190,7 @@ The relationship between the ratings and movies collections is established
 through the shared movieId field. Ratings documents reference movies by
 movieId, which corresponds directly to the movieId field in the movies
 collection. This link is implicit, MongoDB does not enforce it, but all
-pipeline code relies on it to join the two collections in pandas
+pipeline code relies on it to join the two collections in pandas.
 
 ### Data Dictionary
 

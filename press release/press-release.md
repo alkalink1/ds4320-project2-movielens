@@ -21,8 +21,8 @@ appeal to an individual based on their own history.
 
 ## Solution Description
 
-This project uses the MovieLens dataset — 100,836 ratings from 610 real
-users across 9,742 movies — stored in MongoDB Atlas and analyzed using a
+This project uses the MovieLens dataset, with 100,836 ratings from 610 real
+users across 9,742 movies stored in MongoDB Atlas and analyzed using a
 collaborative filtering model built on Singular Value Decomposition (SVD).
 SVD works by finding hidden patterns in how groups of users rate movies
 together, then using those patterns to predict how a specific user would
@@ -38,7 +38,7 @@ better than published benchmarks on this dataset.
 The chart below shows the top 10 movie recommendations generated for a
 sample user. Each bar represents the model's predicted rating for that user
 specifically. The color encodes the movie's global average rating across all
-users — green means it is highly rated overall, red means it is lower rated
+users, with green meaning it is highly rated overall and red meaning it is lower rated
 overall. The fact that Ace Ventura: Pet Detective appears near the top in red
 is the system working correctly: the model predicts this user will love it
 based on their rating history, even though it is not globally beloved. This

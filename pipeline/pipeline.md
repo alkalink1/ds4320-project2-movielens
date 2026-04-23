@@ -164,8 +164,7 @@ log.info(f"Data prepared: {len(qualified)} qualified movies")
 
 ## Step 3: Model — SVD Collaborative Filtering
 
-We implement SVD (Singular Value Decomposition) using pure numpy and
-pandas, avoiding any external library version conflicts. SVD decomposes
+We implement SVD (Singular Value Decomposition). SVD decomposes
 the user-item rating matrix into latent factors that capture hidden
 patterns in user preferences. We evaluate the model using 5-fold
 cross-validation to get a robust estimate of performance.
@@ -483,21 +482,20 @@ log.info("Rating distribution chart saved")
 
     Chart saved as rating_distribution.png
 
-
 ## Visualization Rationale
 
 Two visualizations were created to support the analysis.
 
 The first chart shows the top 10 predicted movies for a sample user,
 colored by global average rating. This directly demonstrates the
-recommendation system working — predicted ratings are specific to this
+recommendation system working, because it predicted ratings are specific to this
 user's taste profile, not just global popularity. The color encoding adds
 a second dimension showing whether the model is recommending movies that
 others also rate highly.
 
 The second chart has two panels. The left shows the full rating
-distribution, revealing the positive skew — users rate movies they chose
-to watch more favorably — which is important context for understanding
+distribution, revealing the positive skew: users rate movies they chose
+to watch more favorably, which is important context for understanding
 model performance. The right panel shows the 20 most-rated movies,
 demonstrating the popularity imbalance that the 50-rating threshold
 helps mitigate by preventing obscure films from being excluded entirely
