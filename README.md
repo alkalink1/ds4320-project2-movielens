@@ -57,8 +57,8 @@ use of collaborative filtering techniques to generate recommendations.
 
 ### Press Release Headline
 
-**Highly Rated Movies Are Not Just Popular — They Are Consistently Loved**
-[Jump to Press Release](https://github.com/alkalink1/ds4320-project2-movielens/blob/main/press%20release/press-release.md)
+[**Highly Rated Movies Are Not Just Popular — They Are Consistently Loved**]
+(https://github.com/alkalink1/ds4320-project2-movielens/blob/main/press%20release/press-release.md)
 
 ---
 
